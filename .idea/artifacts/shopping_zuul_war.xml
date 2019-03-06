@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="shopping-zuul:war">
+    <output-path>$PROJECT_DIR$/shopping-zuul/target</output-path>
+    <root id="archive" name="shopping-zuul-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="shopping-zuul:war exploded" />
+    </root>
+  </artifact>
+</component>

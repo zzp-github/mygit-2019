@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: 'shopping-pojo'
+  datasource:
+    username: root
+    password: 960815
+    url: 'jdbc:mysql://localhost:3306/pinyougoudb?useUnicode=true&characterEncoding=UTF-8'
+    type: com.alibaba.druid.pool.DruidDataSource
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+
+
+ 

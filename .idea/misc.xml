@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/shopping-server-ms" />
+    <file type="web" url="file://$PROJECT_DIR$/shopping-zuul" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/shopping-parents/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-server-ms/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-sellergoods-ms/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-content-ms/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-search-ms/pom.xml" />
+        <option value="$PROJECT_DIR$/shopping-page-ms/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

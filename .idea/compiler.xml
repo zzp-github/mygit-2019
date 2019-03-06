@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="shopping-content-ms" />
+        <module name="shopping-mapper" />
+        <module name="shopping-page-ms" />
+        <module name="shopping-pojo" />
+        <module name="shopping-search-ms" />
+        <module name="shopping-sellergoods-ms" />
+        <module name="shopping-server-ms" />
+        <module name="shopping-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shopping-content-ms" target="1.8" />
+      <module name="shopping-manage-web" target="1.8" />
+      <module name="shopping-mapper" target="1.8" />
+      <module name="shopping-page-ms" target="1.8" />
+      <module name="shopping-parents" target="1.8" />
+      <module name="shopping-pojo" target="1.8" />
+      <module name="shopping-query-ms" target="1.8" />
+      <module name="shopping-search-ms" target="1.8" />
+      <module name="shopping-sellergoods-ms" target="1.8" />
+      <module name="shopping-server-ms" target="1.8" />
+      <module name="shopping-sorl" target="1.8" />
+      <module name="shopping-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
