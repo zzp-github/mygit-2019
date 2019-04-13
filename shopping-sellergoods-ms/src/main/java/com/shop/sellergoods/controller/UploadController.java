@@ -17,7 +17,7 @@ public class UploadController {
 	public Result uploadFile(MultipartFile file){
 		try {
 			//设置虚拟的映射路径 ---> D:/file
-			String path="E:\\ProgramData\\Java\\tempData\\file";
+			String path="D:\\ProgramDate\\Java\\tempData\\file";
 			String url = "";
 			if (file!=null && file.getSize()>0) {
 				file.transferTo(new File(path, file.getOriginalFilename()));

@@ -510,4 +510,12 @@
       bank_name = #{bankName,jdbcType=VARCHAR}
     where seller_id = #{sellerId,jdbcType=VARCHAR}
   </update>
+  <update id="updatePassWord" parameterType="java.util.HashMap">
+    update tb_seller
+    set password = #{passWord}
+    where seller_id = #{sellerId}
+  </update>
+  <select id="selectBySelleridPassword" parameterType="java.util.HashMap" resultMap="BaseResultMap">
+    select * from tb_seller where seller_id=#{sellerId} and password=#{passWord}
+  </select>
 </mapper>

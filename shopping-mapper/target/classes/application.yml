@@ -3,7 +3,7 @@ spring:
     name: 'shopping-mapper'
   datasource:
     username: root
-    password: 960815
+    password: 15995123
     url: 'jdbc:mysql://localhost:3306/pinyougoudb?useUnicode=true&characterEncoding=UTF-8'
     type: com.alibaba.druid.pool.DruidDataSource
 

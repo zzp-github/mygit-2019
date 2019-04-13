@@ -52,6 +52,12 @@ public class Seller implements Serializable{
 
     private String bankName;
 
+    private Long bankNumber;
+
+    public void setBankNumber(Long bankNumber){ this.bankNumber=bankNumber; }
+
+    public Long getBankNumber(){ return bankNumber; }
+
     public String getSellerId() {
         return sellerId;
     }

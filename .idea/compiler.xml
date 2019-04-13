@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shopping-content-ms" />
+        <module name="shopping-login-ms" />
         <module name="shopping-mapper" />
         <module name="shopping-page-ms" />
         <module name="shopping-pojo" />
         <module name="shopping-search-ms" />
+        <module name="shopping-seller-ms" />
         <module name="shopping-sellergoods-ms" />
         <module name="shopping-server-ms" />
         <module name="shopping-zuul" />
@@ -18,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="shopping-content-ms" target="1.8" />
+      <module name="shopping-login-ms" target="1.8" />
       <module name="shopping-manage-web" target="1.8" />
       <module name="shopping-mapper" target="1.8" />
       <module name="shopping-page-ms" target="1.8" />
@@ -25,10 +28,25 @@
       <module name="shopping-pojo" target="1.8" />
       <module name="shopping-query-ms" target="1.8" />
       <module name="shopping-search-ms" target="1.8" />
+      <module name="shopping-seller-ms" target="1.8" />
       <module name="shopping-sellergoods-ms" target="1.8" />
       <module name="shopping-server-ms" target="1.8" />
       <module name="shopping-sorl" target="1.8" />
       <module name="shopping-zuul" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shopping-content-ms" options="-parameters" />
+      <module name="shopping-login-ms" options="-parameters" />
+      <module name="shopping-mapper" options="-parameters" />
+      <module name="shopping-page-ms" options="-parameters" />
+      <module name="shopping-pojo" options="-parameters" />
+      <module name="shopping-search-ms" options="-parameters" />
+      <module name="shopping-seller-ms" options="-parameters" />
+      <module name="shopping-sellergoods-ms" options="-parameters" />
+      <module name="shopping-server-ms" options="-parameters" />
+      <module name="shopping-zuul" options="-parameters" />
+    </option>
   </component>
 </project>

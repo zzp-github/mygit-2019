@@ -4,6 +4,7 @@ import com.shop.pojo.Seller;
 import com.shop.pojo.SellerExample;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface SellerMapper {
@@ -28,4 +29,8 @@ public interface SellerMapper {
     int updateByPrimaryKeySelective(Seller record);
 
     int updateByPrimaryKey(Seller record);
+
+    int updatePassWord(HashMap map);
+
+    Seller selectBySelleridPassword(HashMap map);
 }
