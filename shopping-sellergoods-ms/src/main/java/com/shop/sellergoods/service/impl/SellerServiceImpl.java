@@ -8,10 +8,10 @@ import com.shop.pojo.Seller;
 import com.shop.pojo.SellerExample;
 import com.shop.sellergoods.service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -24,6 +24,9 @@ public class SellerServiceImpl implements SellerService {
 
 	@Autowired
 	private SellerMapper sellerMapper;
+
+	@Autowired
+	public RedisTemplate redisTemplate;
 	
 	/**
 	 * 查询全部
@@ -43,6 +46,10 @@ public class SellerServiceImpl implements SellerService {
 		return new PageResult(page.getTotal(), page.getResult());
 	}
 
+	public List<Seller> findStatus(){
+		return sellerMapper.selectByStatus();
+	}
+
 	/**
 	 * 增加
 	 */
@@ -54,14 +61,7 @@ public class SellerServiceImpl implements SellerService {
 	}
 
 	
-	/**
-	 * 修改
-	 */
-	@Override
-	public void update(Seller seller){
-		sellerMapper.updateByPrimaryKey(seller);
-	}	
-	
+
 	/**
 	 * 根据ID获取实体
 	 * @param id
@@ -170,6 +170,49 @@ public class SellerServiceImpl implements SellerService {
 		Seller seller = sellerMapper.selectByPrimaryKey(sellerId);
 		seller.setStatus(status);
 		sellerMapper.updateByPrimaryKey(seller);
+	}
+
+	@Override
+	public Seller findByKey(String sellerId) {
+		Seller seller = sellerMapper.selectByPrimaryKey(sellerId);
+		return seller;
+	}
+	@Override
+	public Seller findCacheSeller(){
+		HashMap map = (HashMap)redisTemplate.boundHashOps("seller").get("seller");
+		if (map==null){
+			return null;
+		}
+		Seller seller=null;
+		Set set = map.keySet();
+		Iterator iter = set.iterator();
+		while (iter.hasNext()) {
+			String key = (String) iter.next();
+			seller = (Seller)map.get(key);
+		}
+		return seller;
+	}
+
+	@Override
+	public void update(Seller seller) {
+		sellerMapper.updateByPrimaryKey(seller);
+		redisTemplate.boundHashOps("seller").delete("seller");
+		HashMap<String,Seller> map = new HashMap<>();
+		map.put(seller.getSellerId(),seller);
+		redisTemplate.boundHashOps("seller").put("seller",map);
+	}
+
+	@Override
+	public void updatePassword(String passWord, String sellerId) {
+		HashMap<Object, Object> map = new HashMap<>();
+		map.put("passWord", passWord);
+		map.put("sellerId", sellerId);
+		sellerMapper.updatePassWord(map);
+		redisTemplate.boundHashOps("seller").delete("seller");
+		HashMap<String,Seller> map1 = new HashMap<>();
+		Seller seller = sellerMapper.selectByPrimaryKey(sellerId);
+		map.put(sellerId,seller);
+		redisTemplate.boundHashOps("seller").put("seller",map1);
 	}
 	
 }

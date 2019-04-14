@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/shopping-parents/shopping-parents.iml" filepath="$PROJECT_DIR$/shopping-parents/shopping-parents.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-pojo/shopping-pojo.iml" filepath="$PROJECT_DIR$/shopping-pojo/shopping-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-search-ms/shopping-search-ms.iml" filepath="$PROJECT_DIR$/shopping-search-ms/shopping-search-ms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shopping-seller-ms/shopping-seller-ms.iml" filepath="$PROJECT_DIR$/shopping-seller-ms/shopping-seller-ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-sellergoods-ms/shopping-sellergoods-ms.iml" filepath="$PROJECT_DIR$/shopping-sellergoods-ms/shopping-sellergoods-ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-server-ms/shopping-server-ms.iml" filepath="$PROJECT_DIR$/shopping-server-ms/shopping-server-ms.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopping-zuul/shopping-zuul.iml" filepath="$PROJECT_DIR$/shopping-zuul/shopping-zuul.iml" />

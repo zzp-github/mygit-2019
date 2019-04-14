@@ -1,7 +1,7 @@
 package com.shop.login.service;
 
 import com.shop.pojo.Seller;
-import org.apache.catalina.User;
+import com.shop.pojo.User;
 
 public interface LoginService {
 

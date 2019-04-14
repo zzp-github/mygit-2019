@@ -3,6 +3,7 @@ package com.shop.sellergoods.controller;
 import com.shop.entity.PageResult;
 import com.shop.entity.Result;
 import com.shop.pojo.ItemCat;
+import com.shop.sellergoods.entity.ItemCatEntity;
 import com.shop.sellergoods.service.ItemCatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -45,12 +46,16 @@ public class ItemCatController {
 	
 	/**
 	 * 增加
-	 * @param itemCat
+	 * @param itemCatEntity
 	 * @return
 	 */
 	@RequestMapping("/add")
-	public Result add(@RequestBody ItemCat itemCat){
+	public Result add(@RequestBody ItemCatEntity itemCatEntity){
 		try {
+			ItemCat itemCat = new ItemCat();
+			itemCat.setParentId(itemCatEntity.getGoods().getCategory2Id());
+			itemCat.setName(itemCatEntity.getName());
+			itemCat.setTypeId(itemCatEntity.getTypeId());
 			itemCatService.add(itemCat);
 			return new Result(true, "增加成功");
 		} catch (Exception e) {
@@ -65,8 +70,13 @@ public class ItemCatController {
 	 * @return
 	 */
 	@RequestMapping("/update")
-	public Result update(@RequestBody ItemCat itemCat){
+	public Result update(@RequestBody ItemCatEntity itemCatEntity){
 		try {
+			ItemCat itemCat = new ItemCat();
+			itemCat.setId(itemCatEntity.getId());
+			itemCat.setParentId(itemCatEntity.getGoods().getCategory2Id());
+			itemCat.setName(itemCatEntity.getName());
+			itemCat.setTypeId(itemCatEntity.getTypeId());
 			itemCatService.update(itemCat);
 			return new Result(true, "修改成功");
 		} catch (Exception e) {

@@ -30,7 +30,11 @@ public interface SellerMapper {
 
     int updateByPrimaryKey(Seller record);
 
-    int updatePassWord(HashMap map);
+    void updatePassWord(HashMap map);
 
     Seller selectBySelleridPassword(HashMap map);
+
+    List<Seller> selectByStatus();
+
+
 }

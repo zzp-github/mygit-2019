@@ -4,7 +4,7 @@ import com.shop.login.service.LoginService;
 import com.shop.mapper.SellerMapper;
 import com.shop.mapper.UserMapper;
 import com.shop.pojo.Seller;
-import org.apache.catalina.User;
+import com.shop.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -45,7 +45,15 @@ public class LoginServiceImpl implements LoginService {
         HashMap<Object, Object> m = new HashMap<>();
         m.put("userName", userName);
         m.put("passWord", passWord);
-        com.shop.pojo.User user = userMapper.selectByUsernamePassword(m);
+        User user = userMapper.selectByUserNamePassWord(m);
+        if (user!=null){
+            if(user.getAdmin()!=0){
+                HashMap<String,User> map1 = new HashMap<>();
+                map1.put(userName,user);
+                redisTemplate.boundHashOps("adminUser").put("adminUser",map1);
+                return user;
+            }
+        }
         return null;
     }
 }

@@ -12,7 +12,6 @@
         <module name="shopping-page-ms" />
         <module name="shopping-pojo" />
         <module name="shopping-search-ms" />
-        <module name="shopping-seller-ms" />
         <module name="shopping-sellergoods-ms" />
         <module name="shopping-server-ms" />
         <module name="shopping-zuul" />
@@ -37,16 +36,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="shopping-content-ms" options="-parameters" />
-      <module name="shopping-login-ms" options="-parameters" />
-      <module name="shopping-mapper" options="-parameters" />
-      <module name="shopping-page-ms" options="-parameters" />
-      <module name="shopping-pojo" options="-parameters" />
-      <module name="shopping-search-ms" options="-parameters" />
-      <module name="shopping-seller-ms" options="-parameters" />
-      <module name="shopping-sellergoods-ms" options="-parameters" />
-      <module name="shopping-server-ms" options="-parameters" />
-      <module name="shopping-zuul" options="-parameters" />
+      <module name="shopping-content-ms" options="" />
+      <module name="shopping-login-ms" options="" />
+      <module name="shopping-mapper" options="" />
+      <module name="shopping-page-ms" options="" />
+      <module name="shopping-pojo" options="" />
+      <module name="shopping-search-ms" options="" />
+      <module name="shopping-seller-ms" options="" />
+      <module name="shopping-sellergoods-ms" options="" />
+      <module name="shopping-server-ms" options="" />
+      <module name="shopping-zuul" options="" />
     </option>
   </component>
 </project>

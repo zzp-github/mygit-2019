@@ -35,7 +35,6 @@ public class GoodsController {
 
 	@Autowired
 	private GoodsService goodsService;
-	
 	/**
 	 * 返回全部列表
 	 * @return
@@ -69,8 +68,7 @@ public class GoodsController {
 		
 		try {
 			// 获得商家信息:
-			//String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-			String sellerId = "yqtech"; //暂时设定
+			String sellerId = goodsGroup.getSeller().getSellerId();
             goodsGroup.getGoods().setSellerId(sellerId);
 			
 			goodsService.add(goodsGroup);
@@ -89,8 +87,8 @@ public class GoodsController {
 	@RequestMapping("/update")
 	public Result update(@RequestBody GoodsGroup goodsGroup){
 		// 获得商家信息:
-		//String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-		String sellerId = "yqtech"; //暂时设定
+		//String sellerId = goodsGroup.getSeller().getSellerId();
+		String sellerId = "baidu"; //暂时设定
         GoodsGroup goods2 = goodsService.findOne(goodsGroup.getGoods().getId());
 		if(!sellerId.equals(goods2.getGoods().getSellerId()) || !sellerId.equals(goodsGroup.getGoods().getSellerId())){
 			return new Result(false, "非法操作");
@@ -140,9 +138,8 @@ public class GoodsController {
 	 */
 	@RequestMapping("/search")
 	public PageResult search(@RequestBody Goods goods, int page, int rows  ){
-		
 		//String sellerId = SecurityContextHolder.getContext().getAuthentication().getName();
-		String sellerId = "yqtech"; //暂时设定
+		String sellerId = "baidu"; //暂时设定
 
         goods.setSellerId(sellerId);
 

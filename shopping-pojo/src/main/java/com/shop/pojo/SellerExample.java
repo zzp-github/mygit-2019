@@ -1764,6 +1764,66 @@ public class SellerExample {
             addCriterion("bank_name not between", value1, value2, "bankName");
             return (Criteria) this;
         }
+
+        public Criteria andBankNumberIsNull() {
+            addCriterion("bank_number is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberIsNotNull() {
+            addCriterion("bank_number is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberEqualTo(Long value) {
+            addCriterion("bank_number =", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberNotEqualTo(Long value) {
+            addCriterion("bank_number <>", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberGreaterThan(Long value) {
+            addCriterion("bank_number >", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberGreaterThanOrEqualTo(Long value) {
+            addCriterion("bank_number >=", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberLessThan(Long value) {
+            addCriterion("bank_number <", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberLessThanOrEqualTo(Long value) {
+            addCriterion("bank_number <=", value, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberIn(List<Long> values) {
+            addCriterion("bank_number in", values, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberNotIn(List<Long> values) {
+            addCriterion("bank_number not in", values, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberBetween(Long value1, Long value2) {
+            addCriterion("bank_number between", value1, value2, "bankNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andBankNumberNotBetween(Long value1, Long value2) {
+            addCriterion("bank_number not between", value1, value2, "bankNumber");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

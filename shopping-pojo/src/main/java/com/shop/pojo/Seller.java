@@ -3,7 +3,7 @@ package com.shop.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Seller implements Serializable{
+public class Seller implements Serializable {
     private String sellerId;
 
     private String name;
@@ -53,10 +53,6 @@ public class Seller implements Serializable{
     private String bankName;
 
     private Long bankNumber;
-
-    public void setBankNumber(Long bankNumber){ this.bankNumber=bankNumber; }
-
-    public Long getBankNumber(){ return bankNumber; }
 
     public String getSellerId() {
         return sellerId;
@@ -248,5 +244,13 @@ public class Seller implements Serializable{
 
     public void setBankName(String bankName) {
         this.bankName = bankName == null ? null : bankName.trim();
+    }
+
+    public Long getBankNumber() {
+        return bankNumber;
+    }
+
+    public void setBankNumber(Long bankNumber) {
+        this.bankNumber = bankNumber;
     }
 }

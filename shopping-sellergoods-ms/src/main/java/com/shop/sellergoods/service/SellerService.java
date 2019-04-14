@@ -32,12 +32,12 @@ public interface SellerService {
 	*/
 	public void add(Seller seller);
 	
-	
+
 	/**
 	 * 修改
 	 */
 	public void update(Seller seller);
-	
+
 
 	/**
 	 * 根据ID获取实体
@@ -67,5 +67,13 @@ public interface SellerService {
 	 * @param status
 	 */
 	public void updateStatus(String sellerId, String status);
+
+	public List<Seller> findStatus();
+
+	public Seller findByKey(String sellerId);
+
+	public Seller findCacheSeller();
+
+	public void updatePassword(String passWord,String sellerId);
 	
 }
