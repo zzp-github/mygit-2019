@@ -510,4 +510,8 @@
       bank_name = #{bankName,jdbcType=VARCHAR}
     where seller_id = #{sellerId,jdbcType=VARCHAR}
   </update>
+  <select id="login" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from tb_seller where seller_id=#{sellerId} and password=#{passWord};
+
+  </select>
 </mapper>

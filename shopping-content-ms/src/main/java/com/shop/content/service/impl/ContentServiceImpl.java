@@ -74,6 +74,7 @@ public class ContentServiceImpl implements ContentService {
         contentMapper.insert(content);
         // 清除缓存
         redisTemplate.boundHashOps("content").delete(content.getCategoryId());
+
     }
 
 

@@ -18,3 +18,9 @@ zuul:
     api-c:
       path: /shopping-search/**
       service-id: shopping-search-ms
+    api-d:
+      path: /shopping-login/**
+      service-id: shopping-login-ms
+    api-e:
+      path: /shopping-seller/**
+      service-id: shopping-seller-ms

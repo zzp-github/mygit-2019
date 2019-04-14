@@ -5,6 +5,7 @@ import com.shop.pojo.SellerExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SellerMapper {
     int countByExample(SellerExample example);
@@ -28,4 +29,6 @@ public interface SellerMapper {
     int updateByPrimaryKeySelective(Seller record);
 
     int updateByPrimaryKey(Seller record);
+
+    Seller login(Map map);
 }
